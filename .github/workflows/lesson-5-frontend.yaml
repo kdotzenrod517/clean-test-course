@@ -28,11 +28,11 @@ jobs:
         run: zip -r deploy.zip build Dockerfile
       - name: '**PLACEHOLDER** Deploy to Elastic Beanstalk'
         run: echo Placeholder for Deployment
-  security_test: 
+  security_test:
     needs: [deploy]
     runs-on: ubuntu-latest
-    steps: 
-      - name: Run OWASP ZAP Baseline Scan
+    steps:
+      - name: Dynamic Application Security Scan
         uses: zaproxy/action-baseline@v0.7.0
         with:
-          target: 'https://hangryhippo.quantic.host'  # **PLACEHOLDER** Replace with actual URL
+          target: 'http://hangry-web-dev.us-east-1.elasticbeanstalk.com/'
