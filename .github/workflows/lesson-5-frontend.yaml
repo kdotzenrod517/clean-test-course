@@ -36,4 +36,3 @@ jobs:
         uses: zaproxy/action-baseline@v0.7.0
         with:
           target: 'https://hangryhippo.quantic.host'  # **PLACEHOLDER** Replace with actual URL
-          rules_file_name: 'owasp-zap-rules.md'
